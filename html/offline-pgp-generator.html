@@ -17,7 +17,8 @@
       --input-bg: #fff;
       --input-text-color: #000;
       --input-border: #000;
-      --buttcon-border: #000;
+      --input-focus-color: #FF5;
+      --button-border: #000;
       --button-bg: #FFF;
       --button-active: #eee;
       --button-text-color: #000;
@@ -27,15 +28,16 @@
       :root {
         --bg-color: #000;
         --text-color: #fff;
-        --fieldset-bg: #333;
+        --fieldset-bg: transparent;
         --fieldset-border: #444;
-        --legend-bg: #666;
+        --legend-bg: #000;
         --input-bg: #000;
-        --input-text-color: #000;
-        --buttcon-border: #FFF;
+        --input-text-color: #fff;
+        --input-focus-color: #220;
+        --button-border: #FFF;
         --input-border: #fff;
-        --button-bg: #00f;
-        --button-active: #0000aa;
+        --button-bg: #eee;
+        --button-active: #ddd;
       }
     }
 
@@ -102,13 +104,13 @@
     textarea:focus,
     input:focus,
     select:focus {
-      background-color: #FF5;
+      background-color: var(--input-focus-color);
     }
 
     button {
       margin: 2ch 0;
       padding: 1ch 2ch;
-      border: 1px solid var(--buttcon-border);
+      border: 1px solid var(--button-border);
       background-color: var(--button-bg);
       box-shadow: 4px 5px 0px 0px rgba(0, 0, 0, 0.5);
       color: var(--button-text-color);
@@ -299,7 +301,6 @@
         </div>
       </div>
     </div>
-    <div class="muted"> Clipboard is shared. Overwrite after use. </div>
   </fieldset>
   <fieldset id="test_field">
     <legend>Test</legend>
